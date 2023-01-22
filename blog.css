@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    width: auto;
+    margin: 0;
+    background: black;
+}
+/*=====nav-bar-container=====*/
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    padding: 3px;
+    position: absolute;
+}
+/*=====links-container-right-and-left=====*/
+.right-links, .left-links {
+    list-style: none;
+    display: flex;
+}
+/*=====right-&-left-links lists*======/
+.right-links li, .left.links {
+    display: inline-block;
+}
+/*=====anchor-tag-links=====*/
+.right-links li a, .left-links li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    padding: 14px 14px;
+    font-weight: bold;
+
+}
+/*=====hover-over-links-transition-to-another-color======*/
+.right-links li a:hover, .left-links li a:hover {
+    color: yellow;
+    transition: 1.3s;
+}
+/*=====create parallax scrolling affect=====*/
+.container {
+  /*=====position: absolute;=====*/
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*=====image container for parallax=====*/
+.container img {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+    position: fixed;
+   
+}
+/*=====going new places text & media query=====*/
+.title{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 7rem;
+    translate: -50% -30%;
+    border: solid rgba(255, 255, 255, 0.495) 5px; padding: 100px;
+    margin-top: 2.5rem;
+    text-decoration: underline 3.5px; color: rgba(255, 255, 255, 0.874);
+    
+
+}
+@media only screen and (max-width: 480px){
+    .title {
+        font-size: 1.9rem;
+        font-weight: 800;
+        translate: -50% -50%;
+        padding: 5.5px;
+        text-decoration: underline;
+
+    }
+}
+/*=====will this work for ipad air-doesn't work..=====*/
+@media only screen and (min-width: 820px){
+    .title {
+        font-size: 7rem;
+        font-weight: 800;
+        translate: -50% -50%;
+    }
+}
+/*don't think I need both if these media queries I will check on that to see the results.*/
+@media only screen and (min-width: 820px){
+    h4 {
+        font-size: 2rem;
+        position: absolute;
+        color: white;
+        top: 25%;
+        left: 50%;
+        translate: -50% -50%;
+        text-decoration: underline;
+    }
+}
+/*=====ends ipad media query tests=====*/
+
+/*=====iphone media query test horizontal=====*/
+@media only screen and (min-width: 820px) {
+.title {
+        position: absolute;
+        font-size: 4rem;
+        padding-top: 30px;
+        font-weight: 800;
+        translate: -50% 10%;
+        border: solid rgba(255, 255, 255, 0.495) 5px; padding: 5px;
+        text-decoration: underline;
+    }
+}
+/*end media query for new places text
+
+/*=====developed by javonte text=====*/
+h4 {
+    color: black;
+    position: absolute;
+    color: white;
+    top: 25%;
+    left: 50%;
+    translate: -50% -50%;
+}
+@media only screen and (max-width: 480px){
+    h4 {
+        font-size: 0.9rem;
+    }
+}
+.content {
+    height: 100vh;
+    width: 100%;
+    background: black;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    padding: 2rem;
+    overflow: hidden;
+    
+}
+
+.content-lists {
+    display: flex;
+    list-style: none;
+}
+
+.content ul li {
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    padding: 60px 25px;
+    font-weight: bold;
+    margin: 0 auto
+
+}
+
+@media only screen and (max-width: 480px) {
+    .content ul li {
+    text-decoration: none; 
+    color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    padding: 14px 14px;
+    font-weight: bold;
+    }
+}
+
+/*=====custom scrollbar=====*/
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(128, 0, 128, 0.356);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(128, 0, 128, 0.443);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(224, 11, 224);
+}
